@@ -36,7 +36,8 @@ function so_seo_filter_permalink( $permalink ) {
 
   return $permalink;
 }
-add_filter('the_permalink', 'so_seo_filter_permalink');
+add_filter('post_link', 'so_seo_filter_permalink', 10000, 1);
+add_filter('the_permalink', 'so_seo_filter_permalink', 10000, 1);
 
 //------------------------------------------------------------------------------
 // Redirect all cross-posts to the 404 Page
